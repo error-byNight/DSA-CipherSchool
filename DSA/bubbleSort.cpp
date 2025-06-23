@@ -11,13 +11,13 @@ void bubbleSort(int arr[], int n){
                 swapped = true;
             }
         }
-        if(swapped == true){
+        if(swapped == false){
             break;
         }
     }
 }
 int main(){
-    int arr[5]= {5,2,8,1,3};
+    int arr[5]= {9,8,2,5,1};
     bubbleSort(arr,5);
     for (int i=0; i<5;i++){
     cout<<arr[i];
