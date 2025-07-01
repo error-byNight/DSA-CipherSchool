@@ -36,6 +36,37 @@ void printList(Node* head) {
     cout << endl;
 }
 
+
+
+void deleteFromPosition(Node* &head, int pos){
+    if(head == NULL) return;
+    if(pos == 0){
+        deleteFromBeginning(head);
+    }
+    Node*temp = head;
+    for(int i = 0; i<pos - 1; I++){
+        temp = temp -> next;
+    }
+    Node* toDel = temp->next;
+    temp->next = temp->next->next;
+    delete toDel;
+}
+
+
+
+bool search(Node*head, int key){
+    Node* temp = head;
+    while(temp != NULL){
+        if(temp->data == key)
+            return true;
+        temp = temp->next;
+    }
+    return false;  
+}
+
+
+
+
 int main() {
     Node* head = NULL;
     insertAtEnd(head, 10);

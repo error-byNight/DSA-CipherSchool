@@ -1,42 +1,42 @@
 #include <iostream> 
 using namespace std;
 
-class Node {
-public:
+class node{
+    public:
     int data;
     Node *next;
 
-    Node(int val) {
+    Node(int val){
         data = val;
         next = NULL;
     }
 };
 
-void insertAtEnd(Node *&head, int val) {
+void insertAtEnd(Node *&head, int val){
     Node *n = new Node(val);
 
-    if (head == NULL) {
+    if(head==NULL){
         head = n;
         return;
     }
 
     Node *temp = head;
-    while (temp->next != NULL) {
+    while(temp->next != NULL){
         temp = temp->next;
     }
     temp->next = n;
 }
 
-void printList(Node* head) {
+void printList(Node* head){
     Node* temp = head;
-    while (temp != NULL) {
-        cout << temp->data << " ";
-        temp = temp->next;
+    while (temp != NUll){
+        cout << temp ->data << " ";
+        temp = temp ->next;
     }
     cout << endl;
 }
 
-int main() {
+int main(){
     Node* head = NULL;
     insertAtEnd(head, 10);
     insertAtEnd(head, 20);
