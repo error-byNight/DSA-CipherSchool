@@ -7,7 +7,7 @@ class Node{
 
     Node(int val){
         data = val;
-        next = NULL:
+        next = NULL;
     }
 };
 void insertAtEnd(Node* & head, int val){
@@ -44,3 +44,4 @@ int main(){
     }
     cout << endl;
     return 0;
+}
