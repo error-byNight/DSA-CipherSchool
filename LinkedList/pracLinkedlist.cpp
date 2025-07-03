@@ -26,6 +26,17 @@ void insertAtEnd(Node* & head, int val){
     temp -> next = n;
 }
 
+void insertAtPosotion(Node* &head, int pos, int val){
+    Node* n = new Node(val);
+    Node* temp = head;
+    for (int i = 0; i<pos; i++){
+        temp = temp->next;
+    }
+    n->next = temp -> next;
+        temp->next = n;
+    
+}
+
 // INSERT AT BEGINNING
 
 int main(){
