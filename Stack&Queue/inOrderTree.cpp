@@ -1,24 +1,26 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 class treeNode{
-public:
+    public:
     int data;
     treeNode* left;
     treeNode* right;
 
-    treeNode(int val){
-        data = val;
+    treeNode(int value){
+        data= value;
         left = right = NULL;
     }
 };
 
-// Inorder traversal (Left, Root, Right)
-void inorder(treeNode* root) {
+///InOrder
+void inorder(treeNode* root){
+    //root | left | right
     if(root == NULL) return;
+
     inorder(root->left);
-    cout << root->data << " ";
-    inorder(root->right);
+    cout<<root-> data<< " ";
+    inorder(root-> right);
 }
 
 int main(){
@@ -33,9 +35,6 @@ int main(){
     root->right->left = new treeNode(6);
     root->right->right = new treeNode(7);
 
-    cout << "Inorder Traversal: ";
-    inorder(root);
-    cout << endl;
 
-    return 0;
+    inorder(root);
 }
